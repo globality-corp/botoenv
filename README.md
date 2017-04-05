@@ -26,9 +26,11 @@ For example, in `~/.aws/config`:
     region = us-east-1
 
     [profile development]
+    region = us-east-1
     source_profile = default
 
     [profile production]
+    region = us-west-2
     source_profile = default
 
 Then, in `~/.aws/credentials`:
