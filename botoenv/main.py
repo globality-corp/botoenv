@@ -20,12 +20,19 @@ def parse_args():
 
 
 def build_credentials_map(session, credentials):
-    return dict(
-        AWS_DEFAULT_REGION=session.get_config_variable("region"),
-        AWS_ACCESS_KEY_ID=credentials.access_key,
-        AWS_SECRET_ACCESS_KEY=credentials.secret_key,
-        AWS_SESSION_TOKEN=credentials.token,
-    )
+    if credentials.token == None:
+        return dict(
+            AWS_DEFAULT_REGION=session.get_config_variable("region"),
+            AWS_ACCESS_KEY_ID=credentials.access_key,
+            AWS_SECRET_ACCESS_KEY=credentials.secret_key,
+        )
+    else:
+        return dict(
+            AWS_DEFAULT_REGION=session.get_config_variable("region"),
+            AWS_ACCESS_KEY_ID=credentials.access_key,
+            AWS_SECRET_ACCESS_KEY=credentials.secret_key,
+            AWS_SESSION_TOKEN=credentials.token,
+        )
 
 
 def render_template(template, credential_map):
