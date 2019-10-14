@@ -1,6 +1,7 @@
 {
-  "type": "python-library",
   "params": {
     "name": "botoenv"
-  }
+  },
+  "type": "python-library",
+  "version": "2019.41.0"
 }
