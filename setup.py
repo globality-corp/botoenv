@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 from setuptools import find_packages, setup
 
+
 project = "botoenv"
-version = "0.4.0"
+version = "0.5.0"
 
 setup(
     name=project,
