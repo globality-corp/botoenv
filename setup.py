@@ -2,7 +2,7 @@
 from setuptools import find_packages, setup
 
 project = "botoenv"
-version = "0.2.0"
+version = "0.3.0"
 
 setup(
     name=project,
@@ -15,7 +15,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        "botocore>=1.5.35",
+        "botocore>=1.12.248",
     ],
     setup_requires=[
         "nose>=1.3.6",
