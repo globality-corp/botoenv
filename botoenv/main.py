@@ -21,7 +21,7 @@ def parse_args():
 
 
 def build_credentials_map(session, credentials):
-    del os.environ["AWS_DEFAULT_REGION"]
+    del environ["AWS_DEFAULT_REGION"]
     if credentials.token is None:
         return dict(
             AWS_DEFAULT_REGION=session.get_config_variable("region"),
