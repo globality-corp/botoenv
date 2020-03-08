@@ -2,8 +2,8 @@
 Capture and export AWS credentials.
 
 """
-import os
 from argparse import ArgumentParser
+from os import environ
 from sys import stdout
 
 from botocore.session import Session
