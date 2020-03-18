@@ -24,7 +24,7 @@ def build_credentials_map(session, credentials):
     if "AWS_DEFAULT_REGION" in environ:
         del environ["AWS_DEFAULT_REGION"]
     else:
-        environ["AWS_DEFAULT_REGION"]=session.get_config_variable("region")
+        environ["AWS_DEFAULT_REGION"] = session.get_config_variable("region")
 
     if credentials.token is None:
         return dict(
