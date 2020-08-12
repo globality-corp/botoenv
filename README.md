@@ -4,8 +4,13 @@ Manage AWS environment variables using botocore
 
 ## Installation
 
+From PyPi:
+
     pip install botoenv
 
+If PyPi is not updated:
+
+    pip install https://github.com/globality-corp/botoenv/archive/0.6.0.tar.gz
 
 ## Usage
 
