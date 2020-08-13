@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 
 project = "botoenv"
-version = "0.5.0"
+version = "0.6.0"
 
 setup(
     name=project,
@@ -28,9 +28,22 @@ setup(
             "botoenv = botoenv.main:main"
         ],
     },
-    tests_require=[
-        "coverage>=3.7.1",
-        "mock>=1.0.1",
-        "PyHamcrest>=1.8.5",
-    ],
+    extras_require={
+        "test": [
+            "nose>=1.3.7",
+            "coverage>=4.0.3",
+            "parameterized>=0.6.1",
+            "mock>=1.0.1",
+            "PyHamcrest>=1.9.0",
+        ],
+        "lint": [
+            "flake8>=3.5.0",
+            "flake8-isort>=3.0.1",
+            "flake8-print>=3.1.0",
+            "isort<5"
+        ],
+        "typehinting": [
+            "mypy>=0.67.0",
+        ],
+    },
 )
