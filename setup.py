@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 
 project = "botoenv"
-version = "0.6.0"
+version = "1.0.0"
 
 setup(
     name=project,
@@ -19,7 +19,6 @@ setup(
         "botocore>=1.12.248",
     ],
     setup_requires=[
-        "nose>=1.3.6",
     ],
     dependency_links=[
     ],
@@ -30,11 +29,12 @@ setup(
     },
     extras_require={
         "test": [
-            "nose>=1.3.7",
+            "pytest",
             "coverage>=4.0.3",
             "parameterized>=0.6.1",
             "mock>=1.0.1",
             "PyHamcrest>=1.9.0",
+            "pytest-cov",
         ],
         "lint": [
             "flake8>=3.5.0",
@@ -43,7 +43,7 @@ setup(
             "isort<5"
         ],
         "typehinting": [
-            "mypy>=0.67.0",
+            "mypy",
         ],
     },
 )
