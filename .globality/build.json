@@ -1,7 +1,10 @@
 {
   "params": {
-    "name": "botoenv"
+    "name": "botoenv",
+    "pypi": {
+      "repository": "pypi"
+    }
   },
   "type": "python-library",
-  "version": "2020.29.10"
+  "version": "2024.52.0"
 }
